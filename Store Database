@@ -1,1 +1,22 @@
-https://www.khanacademy.org/computing/computer-programming/sql/sql-basics/pp/project-design-a-store-database
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, price REAL, quantity INTEGER, size TEXT, aisle INTEGER);
+INSERT INTO store VALUES (1, "Rainbow Tee", 10.99, 15, "Large", 6);
+INSERT INTO store VALUES (2, "Floral Tee", 12.00, 10, "Medium", 5);
+INSERT INTO store VALUES (3, "Pajama Bottoms", 15.25, 8, "XLarge", 2);
+INSERT INTO store VALUES (4, "Pink Shorts", 8.99, 5, "Small", 3);
+INSERT INTO store VALUES (5, "Red Shoes Tee", 9.75, 3, "XSmall", 1);
+INSERT INTO store VALUES (6, "Cheetah Pajama Set", 18.00, 5, "XXLarge", 4);
+INSERT INTO store VALUES (7, "Childs Rainbow Tee", 8.99, 10, "SM", 6);
+INSERT INTO store VALUES (8, "Childs Floral Tee", 10.00, 5, "MD", 5);
+INSERT INTO store VALUES (9, "Childs Pajama Bottoms", 13.25, 3, "LG", 2);
+INSERT INTO store VALUES (10, "Childs Pink Shorts", 6.99, 5, "XL", 3);
+INSERT INTO store VALUES (11, "Childs Red Shoes Tee", 7.75, 5, "XS", 1);
+INSERT INTO store VALUES (12, "Childs Cheetah Pajama Set", 16.00, 6, "XXL", 4);
+INSERT INTO store VALUES (13, "Orange Smiley Face Tee", 6.99, 6, "XXSmall", 5);
+INSERT INTO store VALUES (14, "Childs Orange Smiley Face Tee", 4.99, 8, "MD", 3);
+INSERT INTO store VALUES (15, "Pride Dress", 15.00, 10, "XL", 1);
+
+/* order items by price*/
+SELECT * FROM store ORDER BY price;
+
+/*show one stat about the items*/
+SELECT SUM(quantity) FROM store;
