@@ -1,0 +1,40 @@
+/* Create table about the people and what they do here */
+CREATE TABLE actors (id INTEGER PRIMARY KEY, star TEXT, costar TEXT, movie_id TEXT);
+INSERT INTO actors (id,star, costar, movie_id) VALUES (1, "Will Smith", "Martin Lawerence", "Bad Boys For Life");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (2, "Dwayne Johnson", "Jack Black", "Jumangi");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (3, "Channing Tatum", "Rachel McAdams", "The Vow");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (4, "Emma Stone", "Stanley Tucci", "Easy A" );
+INSERT INTO actors (id, star, costar, movie_id) VALUES (5, "Meryl Streep", "Amanda Seyfried", "Mama Mia");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (6, "Chris Pratt", "Zoe Saldana", "Guardians of the Galaxy");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (7, "Chris Hemsworth", "Natalie Portman", "Thor");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (8, "Hayden Christensen", "Ewan McGregor", "Star Wars");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (9, "Tom Holland", "Zendaya", "Spiderman: No Way Home");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (10, "Stephanie Beatriz", "Diane Guerrero", "Encanto");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (11, "Kristen Stewart", "Taylor Lautner", "Twilight");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (12, "Gal Gadot", "Chris Pine", "Wonder Woman");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (13, "Kevin James", "Eva Mendes", "Hitch");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (14, "Alex Roe", "Jessica Rothe", "Forever My Girl");
+INSERT INTO actors (id, star, costar, movie_id) VALUES (15, "Scott Eastwood", "Britt Robertson", "The Longest Ride");
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, movie_id TEXT);
+INSERT INTO movies (id, movie_id) VALUES (1, "Bad Boys For Life");
+INSERT INTO movies (id, movie_id) VALUES (2, "Jumangi");
+INSERT INTO movies (id, movie_id) VALUES (3, "The Vow");
+INSERT INTO movies (id, movie_id) VALUES (4, "Easy A");
+INSERT INTO movies (id, movie_id) VALUES (5, "Mama Mia");
+INSERT INTO movies (id, movie_id) VALUES (6, "Guardians of the Galaxy");
+INSERT INTO movies (id, movie_id) VALUES (7, "Thor");
+INSERT INTO movies (id, movie_id) VALUES (8, "Star Wars");
+INSERT INTO movies (id, movie_id) VALUES (9, "Spiderman: No Way Home");
+INSERT INTO movies (id, movie_id) VALUES (10, "Encanto");
+INSERT INTO movies (id, movie_id) VALUES (11, "Twilight");
+INSERT INTO movies (id, movie_id) VALUES (12, "Wonder Woman");
+INSERT INTO movies (id, movie_id) VALUES (13, "Hitch");
+INSERT INTO movies (id, movie_id) VALUES (14, "Forever My Girl");
+INSERT INTO movies (id, movie_id) VALUES (15, "The Longest Ride");
+
+/*show costars & which movie they star in together*/
+
+SELECT * FROM actors
+JOIN movies
+ON movies.movie_id = actors.movie_id
